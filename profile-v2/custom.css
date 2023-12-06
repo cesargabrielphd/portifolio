@@ -1,0 +1,106 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+   top: 0;
+  width: 1440px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.content-gradient {
+  background-image: linear-gradient(to bottom, #dedcdc 50%, #f4f4f4 70%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.content-profile {
+  width: 980px;
+}
+.profile-ribbon {
+  width: 100%;
+  padding-top: 14px;
+  padding-bottom: 16px;
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0.23px;
+  border-bottom: 1px solid #606060;
+}
+.profile-apresentation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.apresentation-title {
+  width: 360px;
+  height: 190px;
+}
+.apresentation-title h1 {
+  color: #333333;
+  font-size: 34px;
+  line-height: 40px;
+  letter-spacing: 0.34px;
+  font-weight: 600;
+  margin: 0;
+  padding-top: 50px;
+}
+.apresentation-title span {
+  color: #333333;
+  font-size: 28px;
+  /* line-height: 30px; */
+  letter-spacing: 0.3px;
+  font-weight: lighter;
+  margin: 0;
+  padding-top: 50px;
+}
+
+.img-person {
+  background-image: url("https://avatars.githubusercontent.com/u/87340795?v=4");
+  width: 380px;
+  height: 400px;
+  padding-top: 46px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  color: #333333;
+}
+main .content {
+  width: 980px;
+}
+main .title-main {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.23px;
+  color: #1C1010;
+  margin: 0;
+}
+
+main .content-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 56px;
+}
+main .description-left,
+main .description-right {
+  width: 420px;
+  height: max-content;
+}
+
+main .description-left p ,
+main .description-right p{
+   padding-bottom: 20px;
+   margin: 0;
+}

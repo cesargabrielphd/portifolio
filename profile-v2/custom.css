@@ -17,7 +17,7 @@ body {
 }
 
 .content {
-  width: 1440px;
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -46,7 +46,6 @@ body {
   font-weight: 600;
   letter-spacing: 0.23px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.16);
-  /*border-bottom: 1px solid 606060*/
   line-height: 1.14286;
   letter-spacing: 0.011em;
   cursor: default;
@@ -76,7 +75,6 @@ body {
 .apresentation-title span {
   color: #333333;
   font-size: 28px;
-  /* line-height: 30px; */
   letter-spacing: 0.3px;
   font-weight: lighter;
   margin: 0;
@@ -87,7 +85,6 @@ body {
   background-image: url("https://avatars.githubusercontent.com/u/87340795?v=4");
   width: 380px;
   height: 400px;
-  /* padding-top: 46px; */
 }
 
 main {
@@ -119,14 +116,6 @@ main .description-right {
   width: 420px;
   height: max-content;
 }
-
-/*
-main .description-left p,
-main .description-right p {
-  padding-bottom: 20px;
-  margin: 0;
-}
-*/
 
 main :is(.description-left, .description-right) p {
   padding-bottom: 20px;
@@ -215,7 +204,6 @@ main .latters-curriculum .box-latters {
   height: 36px;
   display: flex;
   align-items: center;
-  /* column-gap: 250px; */
 }
 
 main .box-latters .box-lattters-text {
@@ -233,11 +221,9 @@ main .box-latters .box-lattters-text h4 {
 }
 
 main .box-latters .box-lattters-text svg {
-  /* fill: #326c99; */
   fill: #848c90 !important;
 }
 
 main .box-latters .box-lattters-text h5 {
-  /* color: #0066cc; */
   color: #848c90;
 }

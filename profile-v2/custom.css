@@ -49,16 +49,11 @@ body {
   letter-spacing: 0.23px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.16);
   /*border-bottom: 1px solid 606060*/
-  font-size: 21px;
   line-height: 1.14286;
-  font-weight: 600;
   letter-spacing: 0.011em;
   cursor: default;
-  display: block;
-  margin: 14px 0 -14px;
-  padding: 0;
-  height: 52px;
   white-space: nowrap;
+  float: none;
 }
 .profile-apresentation {
   display: flex;

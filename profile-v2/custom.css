@@ -17,7 +17,6 @@ body {
 }
 
 .content {
-  top: 0;
   width: 1440px;
   display: flex;
   justify-content: center;
@@ -173,6 +172,7 @@ main .box h4 {
   text-transform: uppercase;
   color: #848c90;
   font-weight: 500;
+  margin: 0;
 }
 
 main .box .percent {
@@ -180,6 +180,7 @@ main .box .percent {
   width: 100%;
   height: 10px;
   background: #f0f0f0;
+  border-radius: 12px;
 }
 
 main .box .percent div {
@@ -188,6 +189,7 @@ main .box .percent div {
   left: 0;
   height: 100%;
   background: #03a9f4;
+  border-radius: 12px;
 }
 
 main .latters-curriculum {
@@ -224,6 +226,10 @@ main .box-latters .box-lattters-text {
   color: #326c99;
   margin: 0 36px;
   flex: 1;
+}
+
+main .box-latters .box-lattters-text h4 {
+  margin: 0;
 }
 
 main .box-latters .box-lattters-text svg {

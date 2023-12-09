@@ -41,7 +41,20 @@ body {
   font-size: 21px;
   font-weight: 600;
   letter-spacing: 0.23px;
-  border-bottom: 1px solid #606060;
+  border-bottom: 1px solid rgba(0,0,0,0.16);
+  /*border-bottom: 1px solid 606060*/
+  font-size: 21px;
+    line-height: 1.14286;
+    font-weight: 600;
+    letter-spacing: .011em;
+    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    cursor: default;
+    display: block;
+    float: left;
+    margin: 14px 0 -14px;
+    padding: 0;
+    height: 52px;
+    white-space: nowrap;
 }
 .profile-apresentation {
   display: flex;

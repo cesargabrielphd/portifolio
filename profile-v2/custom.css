@@ -189,3 +189,44 @@ main .box .percent div {
   height: 100%;
   background: #03a9f4;
 }
+
+main .latters-curriculum {
+  width: 980px;
+  height: max-content;
+  margin-top: 48px;
+}
+
+main .latters-curriculum .title-main {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.23px;
+  color: #1c1010;
+  margin: 0;
+}
+
+main .latters-curriculum .box-latters {
+  width: 980px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  /* column-gap: 250px; */
+}
+
+main .box-latters .box-lattters-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 16px;
+  color: #326c99;
+  margin: 0 36px;
+  flex: 1;
+}
+
+
+main .box-latters .box-lattters-text svg {
+  fill: #326c99;
+}
+
+main .box-latters .box-lattters-text h5{
+  color: #0066CC;
+}

@@ -103,7 +103,7 @@ main .title-main {
   font-weight: 600;
   letter-spacing: 0.23px;
   color: #1c1010;
-  margin: 0;
+  margin: 0 50px;
 }
 
 main .content-main {
@@ -111,6 +111,7 @@ main .content-main {
   flex-direction: row;
   justify-content: flex-start;
   gap: 56px;
+  margin:0 50px;
 }
 main .description-left,
 main .description-right {
@@ -133,10 +134,11 @@ main .habilidades .title2 {
   font-weight: 600;
   letter-spacing: 0.23px;
   color: #1c1010;
-  margin: 0;
+  margin: 0 50px;
 }
 
 main .content-habilid {
+  margin: 0 50px;
   margin-top: 16px;
 }
 
@@ -197,9 +199,11 @@ main .latters-curriculum .title-main {
   font-weight: 600;
   letter-spacing: 0.23px;
   color: #1c1010;
-  margin: 0;
+  margin: 0 50px;
 }
-
+main .content-latters{
+  margin: 0 50px;
+}
 main .latters-curriculum .box-latters {
   width: 980px;
   height: 36px;
@@ -215,6 +219,18 @@ main .box-latters .box-lattters-text {
   column-gap: 16px;
   color: #326c99;
   margin: 0 36px;
+}
+
+main .lattters-text {
+  display: flex;
+  flex-direction: column;
+}
+main .lattters-text h5{
+  margin: 0;
+}
+main .lattters-text .lattters-sub{
+  margin: 0;
+  padding-left: 15px;
 }
 
 main .box-latters .box-lattters-text h4 {

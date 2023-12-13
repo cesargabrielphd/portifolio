@@ -189,6 +189,10 @@ main .content-habilid .box {
   justify-content: start;
   align-items: center;
 }
+main .habilidades .more{
+  margin-top: 60px;
+}
+
 main .box h4 {
   text-transform: uppercase;
   color: #848c90;

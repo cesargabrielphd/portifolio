@@ -31,13 +31,17 @@ body {
     from(#eaeaea),
     to(#fafafa)
   );
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   justify-content: center;
 }
 .content-profile {
   width: 980px;
-  margin: 0 50px;
+}
+@media (max-width: 980px) {
+  .content-profile {
+    margin: 0 50px;
+  }
 }
 .profile-ribbon {
   width: 100%;

@@ -12,7 +12,7 @@ jobs:
 #      - name: Build
 #        run: echo "Building the application"
   # Deploy desenvolvimento
-  deploy-development:
+  development:
     runs-on: ubuntu-latest
     environment:
       name: development
@@ -32,12 +32,12 @@ jobs:
           REMOTE_PORT: ${{ vars.REMOTE_PORT }}
           TARGET: ${{ vars.TARGET }}
 #  # Deploy staging
-#  deploy-staging:
+#  staging:
 #    runs-on: ubuntu-latest
 #    environment:
 #      name: staging
 #      url: ${{ vars.URL }}
-#    needs: deploy-development
+#    needs: development
 #    steps:
 #      - name: Repo Checkout
 #        uses: actions/checkout@v2
@@ -52,13 +52,13 @@ jobs:
 #          REMOTE_PORT: ${{ vars.REMOTE_PORT }}
 #          TARGET: ${{ vars.TARGET }}
   # Deploy produção
-  deploy-production:
+  production:
     runs-on: ubuntu-latest
     environment:
       name: production
       url: ${{ vars.URL }}
-    #needs: deploy-staging
-    needs: deploy-development
+    #needs: staging
+    needs: development
     steps:
       - name: Repo Checkout
         uses: actions/checkout@v2

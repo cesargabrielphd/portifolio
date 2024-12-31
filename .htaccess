@@ -1,0 +1,40 @@
+RewriteEngine On
+
+# Força HTTPS e adiciona 'www' apenas para o domínio principal
+RewriteCond %{HTTP_HOST} ^cesargabrielphd\.com$ [NC]
+RewriteRule ^ https://www.cesargabrielphd.com%{REQUEST_URI} [L,R=301]
+
+# Força HTTPS para subdomínios sem adicionar 'www'
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} ^([^.]+)\.cesargabrielphd\.com$ [NC]
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Redireciona tentativas de acesso a /dev/ e /stage/
+RewriteRule ^/dev/ https://www.cesargabrielphd.com/errors/404/index.html [L,R=301]
+RewriteRule ^/stage/ https://www.cesargabrielphd.com/errors/404/index.html [L,R=301]
+
+# Página de ERRO STATUSCODE personalizada dominío principal
+ErrorDocument 404 /errors/404/index.html
+ErrorDocument 403 /errors/404/index.html
+ErrorDocument 500 /errors/404/index.html
+ErrorDocument 502 /errors/404/index.html
+ErrorDocument 503 /errors/404/index.html
+# Página de ERRO STATUSCODE personalizada qualquer dominío
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteRule ^(.*)$ https://www.cesargabrielphd.com/errors/404/index.html [L,R=301]
+
+# Configuração de cache para arquivos estáticos (1 ano)
+SetEnvIf Request_URI "\.(ico|pdf|flv|jpg|jpeg|png|gif|swf|mp3|mp4)$" STATIC_FILES
+Header set Cache-Control "public" env=STATIC_FILES
+Header unset Last-Modified env=STATIC_FILES
+
+# Configuração de cache para arquivos dinâmicos (6 meses)
+SetEnvIf Request_URI "\.(html|js|css|xml|txt|xsl)$" DYNAMIC_FILES
+Header set Cache-Control "max-age=15552000, must-revalidate" env=DYNAMIC_FILES
+
+#   fonte:
+# - https://cwiki.apache.org/confluence/display/httpd/RewriteHTTPToHTTPS
+# - https://www.askapache.com/htaccess/ssl-example-usage-in-htaccess/
+# - https://www.github.com/cesargabrielphd/
+# - chat copilot vscode

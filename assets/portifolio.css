@@ -3,7 +3,7 @@
 *::before {
   margin: 0;
   padding: 0;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
 }
 header,
 nav,
@@ -18,8 +18,8 @@ footer {
 }
 
 body {
-  font-family: "SF Pro Dislay", "Helvetica Neue", "Helvetica", "San Francisco",
-    "Open Sans", "Noto Sans", "Arial", sans-serif;
+  font-family: "SF Pro Dislay", "Helvetica Neue", "Helvetica", "San Francisco", "Open Sans", "Noto Sans", "Arial",
+    sans-serif;
   width: 100%;
   max-width: 2560px;
   margin: 0 auto;
@@ -37,11 +37,11 @@ body > * {
   max-width: 2560px;
   justify-items: center;
 }
-/* body > main > * {
+body > main > * {
   width: 100%;
   max-width: 2560px;
   justify-items: center;
-} */
+}
 
 nav[id="profile-ribbon"] {
   position: sticky;
@@ -125,8 +125,7 @@ nav[id="profile-ribbon"] div[class="p-r-title"] {
   line-height: 1.14286;
   font-weight: 600;
   letter-spacing: 0.011em;
-  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
-    "Arial", sans-serif;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   cursor: default;
   display: block;
   float: left;
@@ -155,6 +154,7 @@ nav[id="profile-ribbon"] div[class="p-r-title"] {
 main[id="main"] {
   display: block;
   unicode-bidi: isolate;
+  margin-bottom: 4em;
 }
 
 main[id="main"] .content {
@@ -177,13 +177,7 @@ main[id="main"] .content .section-content .image-hero-container {
   left: 0;
   width: 100%;
   overflow: hidden;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#eaeaea),
-    to(#fafafa)
-  );
+  background: -webkit-gradient(linear, left top, left bottom, from(#eaeaea), to(#fafafa));
   background: -webkit-linear-gradient(top, #eaeaea 0%, #fafafa 100%);
   background: linear-gradient(to bottom, #eaeaea 0%, #fafafa 100%);
 }
@@ -191,6 +185,7 @@ main[id="main"] .content .section-content .image-hero-container {
 main[id="main"] .section-hero .image-hero {
   background-image: url("/img/astronauta-grande.png");
   height: 336px;
+  /* Melhorar a foto e o tamanho*/
   /* background-size: 489px 336px; */
   background-size: auto 336px;
   background-repeat: no-repeat;
@@ -229,8 +224,7 @@ main[id="main"] .section-hero .typography-section-headline {
   line-height: 1.05;
   font-weight: 500;
   letter-spacing: 0.008em;
-  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
-    "Arial", sans-serif;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 .typography-subsection-subhead {
   margin-top: 0;
@@ -238,8 +232,7 @@ main[id="main"] .section-hero .typography-section-headline {
   line-height: 1.09375;
   font-weight: 300;
   letter-spacing: 0.011em;
-  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
-    "Arial", sans-serif;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 main[id="main"] .section-bio {
@@ -267,6 +260,10 @@ main[id="main"] section.section-content {
 main[id="main"] section.section-content #content-description {
   position: relative;
   z-index: 1;
+}
+
+main[id="main"] div[id="content-description"] div[id="description-right"] {
+  margin-left: 8.33333%;
 }
 
 main[id="main"] .column {
@@ -299,4 +296,70 @@ main[id="main"] section.section-bio .column {
   padding: 0;
   float: left;
   min-height: 2px;
+}
+
+main[id="main"] .latters-curriculum {
+  width: 980px;
+  height: max-content;
+  padding-top: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+main[id="main"] .latters-curriculum .title-main {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.23px;
+  color: #1c1010;
+}
+@media (max-width: 980px) {
+  main[id="main"] .latters-curriculum .title-main {
+    margin: 0 50px;
+  }
+  main .content-latters {
+    margin: 0 50px;
+  }
+}
+main[id="main"] .latters-curriculum .box-latters {
+  width: 980px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+}
+
+main[id="main"] .box-latters .box-lattters-text {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 16px;
+  color: #326c99;
+}
+
+main[id="main"] .lattters-text {
+  display: flex;
+  flex-direction: column;
+}
+main[id="main"] .lattters-text h5 {
+  margin: 0;
+}
+main[id="main"] .lattters-text .lattters-sub {
+  margin: 0;
+  padding-left: 15px;
+}
+
+main[id="main"] .box-latters .box-lattters-text h4 {
+  margin: 0;
+}
+
+main[id="main"] .box-latters .box-lattters-text svg {
+  fill: #848c90 !important;
+  width: 25px;
+  height: 24px;
+}
+
+main[id="main"] .box-latters .box-lattters-text h5 {
+  color: #848c90;
 }

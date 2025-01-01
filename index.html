@@ -3,9 +3,19 @@
   <head>
     <title>Portifolio</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="/img/astronauta-grande.png" />
-    <link rel="stylesheet" href="/assets/portifolio.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/img/astronauta-grande.png"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/portifolio.css"
+    />
     <link
       rel="stylesheet"
       type="text/css"
@@ -31,9 +41,7 @@
           </div>
           <div class="headlines">
             <h1 class="typography-section-headline">César Gabriel</h1>
-            <h2 class="typography-subsection-subhead">
-              Bacharel em Estatística
-            </h2>
+            <h2 class="typography-subsection-subhead">Bacharel em Estatística</h2>
             <span class="profession-aviso">Graduando</span>
           </div>
         </div>
@@ -41,43 +49,49 @@
       <section class="section section-bio">
         <div class="section-content">
           <h2 class="title-main">Descrição Pessoal</h2>
-          <div id="content-description" class="row row-logical">
-            <div id="description-left" class="column large-5 small-12">
+          <div
+            id="content-description"
+            class="row row-logical"
+          >
+            <div
+              id="description-left"
+              class="column large-5 small-12"
+            >
               <p>
-                Eu sou César Gabriel, estudante de Estatística na Universidade
-                de Brasília. Sou fascinado pela arte de decifrar padrões nos
-                números.
+                Eu sou César Gabriel, estudante de Estatística na Universidade de Brasília. Sou fascinado pela arte de
+                decifrar padrões nos números.
               </p>
               <p>
-                Desde que entrei na faculdade, mergulhei nesse universo
-                intrigante. Inicialmente intimidador, logo percebi que a
-                estatística vai além de fórmulas, sendo uma ferramenta para
-                compreender o comportamento dos dados.
+                Desde que entrei na faculdade, mergulhei nesse universo intrigante. Inicialmente intimidador, logo
+                percebi que a estatística vai além de fórmulas, sendo uma ferramenta para compreender o comportamento
+                dos dados.
               </p>
               <p>
-                Ser estudante de estatística é explorar um mundo rico em padrões
-                e incertezas, onde cada aula e projeto revelam a narrativa por
-                trás dos números.
+                Ser estudante de estatística é explorar um mundo rico em padrões e incertezas, onde cada aula e projeto
+                revelam a narrativa por trás dos números.
               </p>
             </div>
-            <div id="description-right" class="column large-5 large-offset-1">
+            <div
+              id="description-right"
+              class="column large-5 large-offset-1"
+            >
               <p>
-                Estou em busca do primeiro emprego, estou entusiasmado para
-                aplicar minha formação e habilidades analíticas.
+                Estou em busca do primeiro emprego, estou entusiasmado para aplicar minha formação e habilidades
+                analíticas.
               </p>
               <p>
-                Pronto para contribuir com precisão em projetos práticos,
-                demonstro comprometimento e uma abordagem proativa.
+                Pronto para contribuir com precisão em projetos práticos, demonstro comprometimento e uma abordagem
+                proativa.
               </p>
-              <p>
-                Busco um desafio profissional para aplicar meu aprendizado e
-                crescer profissionalmente.
-              </p>
+              <p>Busco um desafio profissional para aplicar meu aprendizado e crescer profissionalmente.</p>
             </div>
           </div>
         </div>
       </section>
-      <aside class="latters-curriculum">
+      <aside
+        class="latters-curriculum"
+        style="display: none"
+      >
         <h2 class="title-main title2">Latters Curriculum</h2>
         <div class="content-latters">
           <!-- nome -->
@@ -96,9 +110,7 @@
               </svg>
               <h5>Nome</h5>
             </div>
-            <div class="box-latters-text-answer">
-              César Gbariel Castro de Oliveira
-            </div>
+            <div class="box-latters-text-answer">César Gbariel Castro de Oliveira</div>
           </div>
           <!-- id latters -->
           <div class="box-latters">
@@ -192,9 +204,7 @@
               </svg>
               <h5>Formação adicional</h5>
             </div>
-            <div class="box-latters-text-answer">
-              xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-            </div>
+            <div class="box-latters-text-answer">xxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
           </div>
           <!-- última atualização -->
           <div class="box-latters">
@@ -211,9 +221,7 @@
               </svg>
               <h5>Vinculação</h5>
             </div>
-            <div class="box-latters-text-answer">
-              xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-            </div>
+            <div class="box-latters-text-answer">xxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
           </div>
           <!-- nome para citações -->
           <div class="box-latters">
@@ -230,12 +238,28 @@
               </svg>
               <h5>Atuação profissional</h5>
             </div>
-            <div class="box-latters-text-answer">
-              xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-            </div>
+            <div class="box-latters-text-answer">xxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
           </div>
         </div>
       </aside>
     </main>
+    <script>
+      const heroContainer = document.querySelector(".image-hero-container");
+      const figureElement = heroContainer.querySelector("figure");
+      const iconsList = ["/img/produtorio.png", "/img/astronauta-grande.png", "/img/astronauta-grande.png", "/img/astronauta-grande.png"];
+      const numIcons = 30;
+
+      for (let i = 0; i < numIcons; i++) {
+        const icon = document.createElement("div");
+        icon.classList.add("icon");
+        const randomIcon = iconsList[Math.floor(Math.random() * iconsList.length)];
+        icon.style.backgroundImage = `url(${randomIcon})`;
+        const randomX = Math.random() * 100;
+        const randomY = Math.random() * 100; 
+        icon.style.left = `${randomX}%`;
+        icon.style.top = `${randomY}%`;
+        heroContainer.insertBefore(icon, figureElement);
+      }
+    </script>
   </body>
 </html>

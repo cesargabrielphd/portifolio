@@ -18,6 +18,7 @@ footer {
 }
 
 body {
+  display: grid;
   font-family: "SF Pro Dislay", "Helvetica Neue", "Helvetica", "San Francisco", "Open Sans", "Noto Sans", "Arial",
     sans-serif;
   width: 100%;
@@ -200,7 +201,7 @@ main[id="main"] .section-hero .image-hero {
   z-index: 1;
   bottom: 0;
   left: 50%;
-  background-position: 381px 100%;
+  background-position: 440px 100%;
 }
 @media only screen and (min-width: 1442px) {
   main[id="main"] .section-hero .image-hero {
@@ -208,6 +209,15 @@ main[id="main"] .section-hero .image-hero {
     margin-right: auto;
     width: 980px;
   }
+}
+
+.icon {
+    position: absolute;
+    width: 40px; /* Ajuste conforme necessário */
+    height: 40px;
+    background: url('path/to/icons.svg') no-repeat center;
+    background-size: contain;
+    opacity: 0.5; /* Ajuste para um efeito mais sutil */
 }
 
 main[id="main"] .section-hero .headlines {
@@ -238,6 +248,7 @@ main[id="main"] .section-hero .typography-section-headline {
 main[id="main"] .section-bio {
   padding-top: 52px;
   padding-bottom: 110px;
+  display: flex;
 }
 
 @media only screen and (min-width: 1442px) {

@@ -118,6 +118,7 @@ nav[id="profile-ribbon"] div[class="p-r-content"] {
   z-index: 2;
   padding-left: calc(22px + constant(safe-area-inset-left));
 }
+
 nav[id="profile-ribbon"] div[class="p-r-title"] {
   color: #000;
   -webkit-transition: color 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
@@ -164,6 +165,7 @@ main[id="main"] .content {
   position: relative;
   padding-top: 106px;
 }
+
 main[id="main"] .content .section-content {
   margin-left: auto;
   margin-right: auto;
